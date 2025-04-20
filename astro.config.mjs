@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import relativeLinks from "astro-relative-links";
+import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  // Replace 'username' with your GitHub username and 'reponame' with your repository name
-  site: 'https://ruben.github.io',
-  base: '/astro-tailwind-ghpages',
-});
+	site: 'https://nexo-labs.github.io/',
+	base: '/astro-testpage/',
+	integrations: [tailwind(), relativeLinks(), react()],
+	output: "static"
+  });
